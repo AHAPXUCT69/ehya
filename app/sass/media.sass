@@ -1,4 +1,133 @@
 @media (max-width: 1200px)
   .container
-    max-width: 1140px
-    margin: auto
+    max-width: 992px
+  .header
+    &-top
+      width: 90%
+      margin: auto
+@media (max-width: 992px)
+  .container
+    max-width: 768px
+  .header
+    &-top
+      width: 90%
+      margin: auto
+  .nav
+    &__menu
+      margin: auto
+      min-width: 400px
+@media (max-width: 768px)
+  .container
+    max-width: 662px
+  .nav
+    &__menu
+      min-width: 360px
+  .header
+    &-top
+      width: 95%
+  .header
+    &-top
+      &__button
+        width: 100px
+        height: 36px
+        min-width: 100px
+        padding: 5px
+  .modal
+    &__dialog
+      min-width: 400px
+@media (max-width: 640px)
+  .container
+    max-width: 90%
+  .header
+    &-top
+      height: 64px
+      &__button
+        display: none
+      &__burger
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        width: 18px
+        height: 14px
+        border: none
+        cursor: pointer
+        background-color: #ffffff
+  .nav
+    display: none
+    &-bottom
+      display: none
+      position: relative
+      &__button
+        display: block
+        margin-top: 30px
+        min-width: 131px
+        max-height: 48px
+        padding: 12px 24px
+        font-family: Open Sans
+        font-weight: bold
+        font-size: 16px
+        line-height: 22px
+        border: 2px solid $link-color
+        border-radius: 8px
+        background-color: transparent
+        color: $link-color
+        transition: all 0.3s
+      &--visible
+        display: flex
+        justify-content: center
+        height: 100%
+        position: absolute
+        top: 64px
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: $primary
+      &__menu
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        max-height: 400px
+        padding: 0
+        margin: 0
+        list-style: none
+      &__item
+        position: relative
+        font-family: Open Sans
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+        color: #ffffff
+      &__submenu
+        display: none
+      &__link
+        text-decoration: none
+        color: inherit
+@media (max-width: 540px)
+  .container
+    max-width: 90%
+  .modal
+    &__dialog
+      min-width: 340px
+@media (max-width: 480px)
+  .modal
+    &__dialog
+      min-width: 300px
+      padding: 30px
+  #name-error, #phone-error, #mail-error
+    left: 30px
+  #name-error
+    top: 165px
+  #phone-error
+    top: 240px
+  #mail-error
+    top: 313px
+@media (max-height: 480px)
+  .modal
+    &__dialog
+      height: 96vh
+      margin: auto
+      overflow: auto
+    &__form
+      padding-bottom: 30px

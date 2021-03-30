@@ -1,0 +1,90 @@
+.header
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+    &__logo
+      &-image
+        width: 90px
+        height: 28px
+      &:active, &:focus
+        outline: none
+    &__button
+      min-width: 131px
+      max-height: 48px
+      padding: 12px 24px
+      font-family: Open Sans
+      font-weight: bold
+      font-size: 16px
+      line-height: 22px
+      border: 2px solid $link-color
+      border-radius: 8px
+      background-color: transparent
+      color: $link-color
+      transition: all 0.3s
+      &:hover
+        background-color: $link-color
+        color: #fff
+        border: 2px solid transparent
+      &:active, &:focus
+        outline: none
+    &__burger
+      display: none
+    &__line
+      width: 18px
+      height: 2px
+      background-color: $primary
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-grow: 1
+  &__menu
+    display: flex
+    justify-content: space-between
+    min-width: 423px
+    max-height: 400px
+    padding: 0
+    margin-left: auto
+    margin-right: 54px
+    list-style: none
+  &-bottom
+    display: none
+    &__button
+      display: none
+  &__item
+    position: relative
+    font-family: Open Sans
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    color: $primary
+  &__link
+    text-decoration: none
+    color: inherit
+    &:hover
+      color: $secondary
+    &:active, &:focus
+      outline: none
+  &__submenu
+    display: none
+    width: 150px
+    position: absolute
+    top: 100%
+    left: 0
+    padding: 0
+    margin: 0
+    list-style: none
+    transition: all 0.5
+    &--visible
+      display: block
+  &__subitem
+    margin-top: 10px
+.tick
+  cursor: pointer
+  &__image
+    margin-left: 4px
+    padding-bottom: 3px
+  &--active
+    transform: rotate(180deg)

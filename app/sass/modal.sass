@@ -1,0 +1,111 @@
+.modal
+  &__overlay
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background-color: rgba(221, 230, 244, 0.8)
+    z-index: 99
+    visibility: hidden
+    opacity: 0
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__dialog
+    min-width: 480px
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 50px
+    background-color: $primary
+    border-radius: 8px
+    color: #ffffff
+    z-index: 100
+    visibility: hidden
+    opacity: 0
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__close
+    position: absolute
+    top: 20px
+    right: 20px
+    text-decoration: none
+    cursor: pointer
+    &:active, &:focus
+      outline: none
+  &__title
+    font-family: Open Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    height: 40px
+    width: 100%
+    padding: 10px
+    margin-top: 30px
+    margin-bottom: 5px
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    background-color: #fff
+    color: $text-color
+    border: none
+    border-radius: 4px
+    overflow: hidden
+    &:active, &:focus
+      outline: none
+  &__info
+    margin-top: 25px
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 24px
+    color: #ffffff
+  &__button
+    min-width: 131px
+    max-height: 48px
+    padding: 12px 24px
+    font-family: Open Sans
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    border: 2px solid $link-color
+    border-radius: 8px
+    background-color: transparent
+    color: $link-color
+    transition: all 0.3s
+    &:hover
+      background-color: $link-color
+      color: #fff
+      border: 2px solid transparent
+    &:active, &:focus
+      outline: none
+    &-wrapper
+      display: flex
+      flex-direction: column-reverse
+      min-height: 120px
+      justify-content: space-between
+.invalid
+  color: red
+#name-error
+  position: absolute
+  top: 183px
+  left: 50px
+#phone-error
+  position: absolute
+  top: 260px
+  left: 50px
+#mail-error
+  position: absolute
+  top: 335px
+  left: 50px
