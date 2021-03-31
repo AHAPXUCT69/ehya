@@ -1,4 +1,7 @@
 .header
+  margin-bottom: 100px
+  &__top
+    margin-bottom: 53px
   &-top
     display: flex
     justify-content: space-between
@@ -35,6 +38,86 @@
       width: 18px
       height: 2px
       background-color: $primary
+  &-main
+    position: relative
+  &__text
+    position: relative
+    max-width: 500px
+    min-height: 579px
+  &__title
+    margin-bottom: 13px
+    font-family: Roboto
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: $primary
+  &__region
+    font-family: Roboto
+    font-weight: bold
+    font-size: 36px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: inherit
+  &__subtitle
+    max-width: 457px
+    margin-top: 0
+    margin-bottom: 64px
+    font-family: Open Sans
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px
+    color: $text-color
+    overflow: auto
+  &__button
+    width: 243px
+    padding: 15px 24px
+    font-family: Open Sans
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    background-color: $primary
+    border-radius: 8px
+    border: none
+    color: #fff
+  &__next
+    text-align: center
+    line-height: 56px
+    position: absolute
+    bottom: 0
+    left: 0px
+    width: 56px
+    height: 56px
+    border-radius: 50%
+    border: 2px solid $text-color
+    cursor: pointer
+    text-decoration: none
+    &--mobile
+      display: none
+  &__images
+    position: absolute
+    top: 0px
+    right: 0px
+    width: 100%
+    height: 579px
+    &--visible
+      display: none
+  &__macbook, &__iphone, &__circle,  &__points
+    position: absolute
+  &__macbook
+    bottom: 20px
+    right: 0
+  &__iphone
+    bottom: 0
+    right: 508px
+  &__circle
+    bottom: -90px
+    right: -25px
+    z-index: -2
+  &__points
+    bottom: 361px
+    right: 652px
 .nav
   display: flex
   justify-content: space-between
@@ -43,7 +126,7 @@
   &__menu
     display: flex
     justify-content: space-between
-    min-width: 423px
+    min-width: 407px
     max-height: 400px
     padding: 0
     margin-left: auto
@@ -53,6 +136,20 @@
     display: none
     &__button
       display: none
+    &__submenu
+      display: none
+    &__tick
+      display: inline-block
+      width: 10px
+      height: 10px
+      margin-left: 15px
+      margin-bottom: 5px
+      border-bottom: 2px solid #fff
+      border-right: 2px solid #fff
+      transform: rotate(45deg)
+      cursor: pointer
+      &--active
+        transform: rotate(225deg)
   &__item
     position: relative
     font-family: Open Sans
@@ -77,14 +174,21 @@
     margin: 0
     list-style: none
     transition: all 0.5
+    z-index: 99
     &--visible
       display: block
   &__subitem
     margin-top: 10px
-.tick
-  cursor: pointer
-  &__image
-    margin-left: 4px
-    padding-bottom: 3px
-  &--active
-    transform: rotate(180deg)
+    z-index: 99
+  &__tick
+    display: inline-block
+    width: 5px
+    height: 5px
+    margin-left: 5px
+    margin-bottom: 5px
+    border-bottom: 2px solid $primary
+    border-right: 2px solid $primary
+    transform: rotate(45deg)
+    cursor: pointer
+    &--active
+      transform: rotate(225deg)

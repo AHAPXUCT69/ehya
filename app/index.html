@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-top">
+        <div class="header-top header__top">
           <a href="#" class="header-top__logo">
             <img
               src="images/dest/logo-top.png"
@@ -22,12 +22,7 @@
               <li class="nav__item"><a href="#" class="nav__link">Домой</a></li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Лэндинги</a
-                ><span class="tick"
-                  ><img
-                    class="tick__image"
-                    src="images/dest/icons/angle-down.svg"
-                    alt="Icon: tick"
-                /></span>
+                ><span class="nav__tick"></span>
                 <ul class="nav__submenu">
                   <li class="nav__subitem">
                     <a href="#" class="nav__link">Рекламный</a>
@@ -42,12 +37,7 @@
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Страницы</a
-                ><span class="tick"
-                  ><img
-                    class="tick__image"
-                    src="images/dest/icons/angle-down.svg"
-                    alt="Icon: tick"
-                /></span>
+                ><span class="nav__tick"></span>
                 <ul class="nav__submenu">
                   <li class="nav__subitem">
                     <a href="#" class="nav__link">Лид-страница</a>
@@ -79,6 +69,56 @@
         <!-- /.header-top -->
       </div>
       <!-- /.container -->
+      <div class="header-main">
+        <div class="container">
+          <div class="header__text">
+            <h1 class="header__title">
+              Номер #1,<br /><span class="header__region">Южная Азия</span
+              ><br />
+              Агенство цифровых продуктов
+            </h1>
+            <p class="header__subtitle">
+              Мы даем результаты, помогающие Вам добиться экономии средств и
+              времени без риска или накладных расходов на управление
+            </p>
+            <button class="button header__button">Наше портфолио</button>
+            <a href="#" class="header__next"
+              ><img
+                src="images/dest/icons/arrow-down.svg"
+                alt="Icon: next block"
+            /></a>
+          </div>
+          <!-- /.header__text -->
+        </div>
+        <!-- /.container -->
+        <div class="header__images">
+          <img
+            class="header__macbook"
+            src="images/dest/Macbook.png"
+            alt="Image: Macbook"
+          />
+          <img
+            class="header__iphone"
+            src="images/dest/iphone.png"
+            alt="Image: Iphone"
+          />
+          <img
+            class="header__circle"
+            src="images/dest/Oval.svg"
+            alt="Image: circle"
+          />
+          <img
+            class="header__points"
+            src="images/dest/points.svg"
+            alt="Imageees: points"
+          />
+          <a href="#" class="header__next header__next--mobile"
+            ><img src="images/dest/icons/arrow-down.svg" alt="Icon: next block"
+          /></a>
+        </div>
+        <!-- /.header__images -->
+      </div>
+      <!-- /.header-main -->
       <nav class="nav-bottom">
         <ul class="nav-bottom__menu">
           <li class="nav-bottom__item">
@@ -86,12 +126,7 @@
           </li>
           <li class="nav-bottom__item">
             <a href="#" class="nav-bottom__link">Лэндинги</a
-            ><span class="tick"
-              ><img
-                class="tick__image"
-                src="images/dest/icons/angle-down.svg"
-                alt="Icon: tick"
-            /></span>
+            ><span class="nav-bottom__tick"></span>
             <ul class="nav-bottom__submenu">
               <li class="nav-bottom__subitem">
                 <a href="#" class="nav-bottom__link">Рекламный</a>
@@ -106,12 +141,7 @@
           </li>
           <li class="nav-bottom__item">
             <a href="#" class="nav-bottom__link">Страницы</a
-            ><span class="tick"
-              ><img
-                class="tick__image"
-                src="images/dest/icons/angle-down.svg"
-                alt="Icon: tick"
-            /></span>
+            ><span class="nav-bottom__tick"></span>
             <ul class="nav-bottom__submenu">
               <li class="nav-bottom__subitem">
                 <a href="#" class="nav-bottom__link">Лид-страница</a>
@@ -136,6 +166,67 @@
         </ul>
       </nav>
     </header>
+    <main class="main">
+      <div class="partners">
+        <div class="container">
+          <div class="partners-wrapper">
+            <h3 class="partners__heading">Наши партнеры</h3>
+            <div class="partners__text">
+              <h2 class="partners__title">
+                Мы работали с ними, <br />Мы доверяем друг другу
+              </h2>
+              <p class="partners__description">
+                Наша команда предоставляет творческое образование высокого
+                уровня для глобальной аудитории студентов, преподавателей и
+                предпринимателей со всего мира
+              </p>
+            </div>
+            <!-- /.partners-text -->
+            <div class="partners__brands">
+              <a href="#" class="partners__link">
+                <img
+                  class="partners__logo"
+                  src="images/dest/icons/slack.svg"
+                  alt="Logo: slack"
+                />
+              </a>
+              <a href="#" class="partners__link">
+                <img
+                  class="partners__logo"
+                  src="images/dest/icons/netflix.svg"
+                  alt="Logo: netflix"
+                />
+              </a>
+              <a href="#" class="partners__link">
+                <img
+                  class="partners__logo"
+                  src="images/dest/icons/fitbit.svg"
+                  alt="Logo: fitbit"
+                />
+              </a>
+              <a href="#" class="partners__link">
+                <img
+                  class="partners__logo"
+                  src="images/dest/icons/google.svg"
+                  alt="Logo: google"
+                />
+              </a>
+              <a href="#" class="partners__link">
+                <img
+                  class="partners__logo"
+                  src="images/dest/icons/airbnb.svg"
+                  alt="Logo: airbnb"
+                />
+              </a>
+            </div>
+            <!-- /.partners__brands -->
+          </div>
+          <!-- /.partners-wrapper -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.partners -->
+    </main>
     <div class="modal">
       <div class="modal__overlay"></div>
       <!-- /.modal__overlay -->

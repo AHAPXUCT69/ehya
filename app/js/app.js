@@ -1,13 +1,19 @@
 $(document).ready(function() {
   // Выпадающее меню
-  var menuLink = $('.nav__link');
-  menuLink.on('click', function() {
+  var menuMark = $('.nav__tick');
+  menuMark.on('click', function() {
     $(this).siblings('.nav__submenu').toggleClass('nav__submenu--visible');
   });
-  var menuBottomLink = $('.nav-bottom__link');
-  menuBottomLink.on('click', function() {
+  var menuBottomMark = $('.nav-bottom__tick');
+  menuBottomMark.on('click', function() {
     $(this).siblings('.nav-bottom__submenu').toggleClass('nav-bottom__submenu--visible');
   });
+  menuMark.on('click', function() {
+    $(this).toggleClass('nav__tick--active');
+  });
+  menuBottomMark.on('click', function() {
+    $(this).toggleClass('nav-bottom__tick--active');
+  })
   //  Маска для телефонов
   $('.phone').mask('+7(000)-000-00-00');
   // Menu Button
