@@ -8,6 +8,14 @@
       right: 380px
     &__points
       right: 550px
+  .partners
+    &__brands
+      justify-content: space-between
+    &__link
+      flex-basis: none
+  .about
+    &__subtitle
+      padding-right: 0
 @media (max-width: 1200px)
   .container
     max-width: 940px
@@ -21,7 +29,7 @@
   .partner
     &__title
       margin-right: 20px
-  .portfolio
+  .about
     &__text
       flex-direction: column
     &__title
@@ -232,7 +240,7 @@
     &__link
       &:last-child
         display: none
-  .portfolio
+  .about
     &__text
       align-items: center
     &__title
@@ -304,3 +312,13 @@
       overflow: auto
     &__form
       padding-bottom: 30px
+@media (min-width: 992px)
+  .header
+    &__next
+      transition: all 0.3s
+      &:hover
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  .button
+    transition: all 0.3s
+    &:hover
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)

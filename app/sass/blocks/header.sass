@@ -1,4 +1,5 @@
 .header
+  background-color: #FAFDFF
   margin-bottom: 100px
   &__top
     margin-bottom: 53px
@@ -81,6 +82,7 @@
     border-radius: 8px
     border: none
     color: #fff
+    z-index: 99
   &__next
     text-align: center
     line-height: 56px
@@ -99,24 +101,23 @@
     position: absolute
     top: 0px
     right: 0px
-    width: 100%
     height: 579px
     &--visible
       display: none
   &__macbook, &__iphone, &__circle,  &__points
     position: absolute
   &__macbook
-    bottom: 20px
+    bottom: 8px
     right: 0
   &__iphone
-    bottom: 0
+    bottom: -18px
     right: 508px
   &__circle
-    bottom: -90px
-    right: -25px
+    bottom: -100px
+    right: -15px
     z-index: -2
   &__points
-    bottom: 361px
+    bottom: 351px
     right: 652px
 .nav
   display: flex
