@@ -21,9 +21,27 @@
   .partner
     &__title
       margin-right: 20px
+  .portfolio
+    &__text
+      flex-direction: column
+    &__title
+      margin-bottom: 20px
+    &__subtitle
+      margin-top: 0
+      margin-bottom: 30px
+  .cards
+    &__item
+      flex-basis: 48%
+      max-width: 100%
+      min-height: 197px
+    &__title
+      margin-bottom: 15px
+    &__description
+      font-size: 17px
+      line-height: 26px
 @media (max-width: 992px)
   .container
-    max-width: 700px
+    max-width: 90%
   .nav
     &__menu
       min-width: 385px
@@ -46,6 +64,13 @@
       flex-direction: column
     &__title, &__description
       max-width: 100%
+  .portfolio
+    &__text
+      align-items: flex-start
+  .cards
+    &__item
+      flex-basis: 100%
+      min-height: 197px
 @media (max-width: 768px)
   .container
     max-width: 586px
@@ -197,7 +222,6 @@
     &__heading
       margin-bottom: 24px
     &__text
-      margin-bottom: 30px
       align-items: center
     &__title
       margin-bottom: 15px
@@ -208,6 +232,16 @@
     &__link
       &:last-child
         display: none
+  .portfolio
+    &__text
+      align-items: center
+    &__title
+      font-size: 28px
+      line-height: 36px
+    &__subtitle
+      text-align: center
+      font-size: 16px
+      line-height: 28px
   .modal
     &__dialog
       min-width: 400px
@@ -221,12 +255,25 @@
     &__macbook
       width: 100%
   .partners
+    padding-bottom: 50px
     &__brands
       max-width: 315px
       min-width: 235px
       margin: auto
     &__logo
       margin-bottom: 25px
+  .cards
+    &__item
+      flex-direction: column
+      max-height: 197px
+    &__title
+      font-size: 20px
+      line-height: 24px
+    &__description
+      font-size: 14px
+      line-height: 20px
+    &__icon
+      margin-bottom: 22px
   .modal
     &__dialog
       min-width: 340px
@@ -234,6 +281,9 @@
   .partners
     &__title
       white-space: normal
+  .cards
+    &__title
+      margin-bottom: 0
   .modal
     &__dialog
       min-width: 300px
