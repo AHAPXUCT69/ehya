@@ -1,7 +1,12 @@
 .portfolio
-  padding-top: 100px
+  padding-top: 87px
   padding-bottom: 100px
+  &-mobile
+    &--visible
+      display: none
   &__heading
+    display: block
+    margin-bottom: 17px
     font-family: Open Sans
     font-weight: 600
     font-size: 14px
@@ -9,19 +14,37 @@
     letter-spacing: 2px
     text-transform: uppercase
     color: $secondary
+    text-decoration: none
+    cursor: default
+    &:focus, &:active
+      outline: none
   &-top
     display: flex
     justify-content: space-between
     align-items: center
-  &__title
-    font-family: Roboto
-    font-weight: bold
-    font-size: 36px
-    line-height: 48px
-    letter-spacing: 0.2px
-    color: $primary
-  &__slider-nav
-
+    margin-bottom: 50px
+    &__slider
+      &-nav
+        display: flex
+        width: 100px
+        justify-content: space-around
+        align-items: center
+        margin-right: 104px
+    &__button
+      &-next, &-prev
+        border: none
+        background-color: transparent
+        cursor: pointer
+        &:focus, &:active
+          outline: none
+    &__title
+      margin: 0
+      font-family: Roboto
+      font-weight: bold
+      font-size: 36px
+      line-height: 48px
+      letter-spacing: 0.2px
+      color: $primary
   &__prev
 
   &__next
@@ -30,18 +53,46 @@
     display: flex
     justify-content: space-between
     align-items: center
+    overflow: visible
     &__card
-      margin-right: 30px
-
+      width: 360px
+      overflow: hidden
     &__photo
       display: block
+      width: 100%
       background-color: #DDE6F4
-      border: 1px solid #DDE6F4
+      border-top: 1px solid #DDE6F4
+      border-left: 1px solid #DDE6F4
+      border-right: 1px solid #DDE6F4
       border-radius: 8px 8px 0px 0px
-
     &__text
-      border: 1px solid #DDE6F4
+      padding: 24px 0 24px 24px
+      border-bottom: 1px solid #DDE6F4
+      border-left: 1px solid #DDE6F4
+      border-right: 1px solid #DDE6F4
       border-radius: 0px 0px 8px 8px
     &__preheader
-
+      margin-top: 0
+      margin-bottom: 15px
+      font-family: Open Sans
+      font-weight: 600
+      font-size: 14px
+      line-height: 20px
+      color: $link-color
     &__header
+      margin-top: 0
+      margin-bottom: 0
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 40px
+      letter-spacing: 0.2px
+      color: $primary
+.swiper-container
+  width: 100%
+  height: 100%
+.portfolio-top__button-next.swiper-button-disabled
+  opacity: 0.3
+.portfolio-top__button-prev.swiper-button-disabled
+  opacity: 0.3

@@ -80,6 +80,11 @@
       flex-basis: 100%
       min-height: 197px
 @media (max-width: 768px)
+  body.lock
+    height: 100%
+    width: 100%
+    position: fixed
+    overflow: hidden
   .container
     max-width: 586px
   .nav
@@ -87,6 +92,7 @@
       display: none
     &-bottom
       position: relative
+      overflow: auto
       &__submenu
         list-style: none
         padding: 0
@@ -187,6 +193,7 @@
       right: 0
       bottom: 0
       width: 100%
+      max-height: 420px
     &__iphone
       position: absolute
       left: 0
@@ -215,15 +222,21 @@
       &__button
         display: none
       &__burger
+        margin-right: 9px
         display: flex
         flex-direction: column
         align-items: center
         justify-content: space-between
-        width: 18px
-        height: 14px
+        width: 22px
+        height: 20px
         border: none
         cursor: pointer
         background-color: #ffffff
+      &__line
+        width: 22px
+        height: 2px
+        border-radius: 10px
+        background-color: $primary
   .partners
     &__heading, &__title, &__description
       text-align: center
@@ -250,48 +263,180 @@
       text-align: center
       font-size: 16px
       line-height: 28px
+  .portfolio
+    &-mobile
+      &__photo
+        object-fit: cover
   .modal
     &__dialog
       min-width: 400px
 @media (max-width: 596px)
   .container
-    max-width: 90%
+    max-width: 86%
   .header
+    &__top
+      margin-bottom: 15px
+    &__title
+      margin-bottom: 10px
+      font-size: 30px
+      line-height: 36px
+    &__subtitle
+      margin-bottom: 16px
+    &__region
+      font-size: 30px
+      line-height: 36px
     &__images
       width: 100%
       height: 100%
     &__macbook
       width: 100%
+      max-height: 380px
   .partners
-    padding-bottom: 50px
+    padding-top: 92px
+    padding-bottom: 43px
+    margin-bottom: 0
+    &__title
+      max-width: 285px
+    &__description
+      font-size: 13px
+      line-height: 24px
+    &__text
+      margin-bottom: 20px
     &__brands
-      max-width: 315px
-      min-width: 235px
+      max-width: 249px
       margin: auto
     &__logo
       margin-bottom: 25px
+  .about
+    &__subtitle
+      margin-bottom: 0
   .cards
     &__item
+      margin-bottom: 10px
+      padding: 21px 27px
       flex-direction: column
       max-height: 197px
+      &:nth-of-type(1)
+        order: 1
+      &:nth-of-type(2)
+        order: 2
+      &:nth-of-type(3)
+        order: 5
+        padding-top: 10px
+        padding-left: 16px
+      &:nth-of-type(4)
+        order: 3
+      &:nth-of-type(5)
+        order: 4
+      &:nth-of-type(6)
+        order: 6
+        padding-top: 8px
     &__title
+      margin-bottom: 7px
       font-size: 20px
       line-height: 24px
     &__description
+      margin-top: 0
       font-size: 14px
       line-height: 20px
     &__icon
-      margin-bottom: 22px
+      width: 32px
+      height: 34px
+      margin-bottom: 20px
+  .portfolio
+    &-mobile
+      &--visible
+        display: block
+        width: 100%
+        padding: 54px 0
+      &__card
+        margin-bottom: 24px
+      &__heading
+        text-align: center
+        display: block
+        font-family: Open Sans
+        font-weight: 600
+        font-size: 14px
+        line-height: 19px
+        letter-spacing: 2px
+        text-transform: uppercase
+        color: $secondary
+        text-decoration: none
+        cursor: default
+      &:focus, &:active
+        outline: none
+      &__title
+        font-family: Roboto
+        font-weight: bold
+        font-size: 36px
+        line-height: 48px
+        letter-spacing: 0.2px
+        text-align: center
+        color: $primary
+      &__photo
+        display: block
+        width: 100%
+        background-color: #DDE6F4
+        border-top: 1px solid #DDE6F4
+        border-left: 1px solid #DDE6F4
+        border-right: 1px solid #DDE6F4
+        border-radius: 8px 8px 0px 0px
+      &__text
+        padding: 24px 0 24px 24px
+        border-bottom: 1px solid #DDE6F4
+        border-left: 1px solid #DDE6F4
+        border-right: 1px solid #DDE6F4
+        border-radius: 0px 0px 8px 8px
+      &__preheader
+        margin-bottom: 0
+        font-family: Open Sans
+        font-weight: 600
+        font-size: 14px
+        line-height: 20px
+        text-align: center
+        color: $link-color
+      &__header
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 24px
+        line-height: 32px
+        letter-spacing: 0.2px
+        text-align: center
+        color: $primary
+    &--hidden
+      display: none
+  .cards
+    &__title
+      margin-bottom: 2px
+      font-size: 20px
+      line-height: 24px
+    &__icon
+      margin-bottom: 25px
   .modal
     &__dialog
       min-width: 340px
 @media (max-width: 480px)
+  .header
+    &__macbook
+      max-height: 320px
   .partners
     &__title
       white-space: normal
   .cards
+    &__item
+      padding: 22px 18px 13px 24px
     &__title
-      margin-bottom: 0
+      margin-bottom: 13px
+  .portfolio
+    &-mobile
+      padding: 0
+      &__title
+        font-size: 28px
+        line-height: 36px
+      &__text
+        padding-left: 10px
+        padding-right: 10px
   .modal
     &__dialog
       min-width: 300px
@@ -304,6 +449,10 @@
     top: 240px
   #mail-error
     top: 313px
+@media (max-width: 380px)
+  .header
+    &__macbook
+      max-height: 230px
 @media (max-height: 480px)
   .modal
     &__dialog

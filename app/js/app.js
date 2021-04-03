@@ -1,4 +1,39 @@
 $(document).ready(function() {
+
+  // Swiper slider
+  const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.portfolio-top__button-next',
+    prevEl: '.portfolio-top__button-prev',
+  },
+  keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+});
+// Swiper slider Reviews
+
+const swiper2 = new Swiper('.reviews__container', {
+  // Optional parameters
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews-slide__button--next',
+  },
+  keyboard: {
+      enabled: false,
+      onlyInViewport: true,
+    }
+});
+
   // Выпадающее меню
   var menuLink = $('.nav__tick, .nav__link');
   menuLink.on('click', function() {
@@ -22,7 +57,8 @@ $(document).ready(function() {
   // Menu Button
   var menuButton = $('.header-top__burger');
   menuButton.on('click', function () {
-    $('.nav-bottom').toggleClass('nav-bottom--visible')
+    $('.nav-bottom').toggleClass('nav-bottom--visible');
+    $('body').toggleClass('lock');
   });
 
   // Modal

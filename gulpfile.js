@@ -43,6 +43,7 @@
 
 	function scripts() {
 		return src([ // Берём файлы из источников
+			'node_modules/swiper/swiper-bundle.min.js',
 			'app/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 			])
 		.pipe(concat('app.min.js')) // Конкатенируем в один файл
