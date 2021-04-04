@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/app.min.css" />
     <title>ehya - Агенство цифровых продуктов №1</title>
@@ -142,7 +146,7 @@
           </li>
           <li class="nav-bottom__item">
             <a href="#" class="nav-bottom__link">Страницы</a
-            ><span class="nav-bottom__tick"></span>
+            ><span class="nav-bottom__tick nav-bottom__tick--active"></span>
             <ul class="nav-bottom__submenu">
               <li class="nav-bottom__subitem">
                 <a href="#" class="nav-bottom__link">Лид-страница</a>
@@ -168,7 +172,7 @@
       </nav>
     </header>
     <main class="main">
-      <div class="partners">
+      <div class="partners" id="partners">
         <div class="container">
           <div class="partners-wrapper">
             <a href="#" class="partners__heading">Наши партнеры</a>
@@ -184,35 +188,51 @@
             </div>
             <!-- /.partners-text -->
             <div class="partners__brands">
-              <a href="#" class="partners__link">
+              <a
+                target="_blank"
+                href="https://slack.com/intl/en-in/"
+                class="partners__link"
+              >
                 <img
                   class="partners__logo"
                   src="images/dest/icons/slack.svg"
                   alt="Logo: slack"
                 />
               </a>
-              <a href="#" class="partners__link">
+              <a
+                target="_blank"
+                href="https://www.netflix.com/ru/"
+                class="partners__link"
+              >
                 <img
                   class="partners__logo"
                   src="images/dest/icons/netflix.svg"
                   alt="Logo: netflix"
                 />
               </a>
-              <a href="#" class="partners__link">
+              <a
+                target="_blank"
+                href="https://www.fitbit.com/"
+                class="partners__link"
+              >
                 <img
                   class="partners__logo"
                   src="images/dest/icons/fitbit.svg"
                   alt="Logo: fitbit"
                 />
               </a>
-              <a href="#" class="partners__link">
+              <a href="https://www.google.ru/" class="partners__link">
                 <img
                   class="partners__logo"
                   src="images/dest/icons/google.svg"
                   alt="Logo: google"
                 />
               </a>
-              <a href="#" class="partners__link">
+              <a
+                target="_blank"
+                href="https://www.airbnb.ru/"
+                class="partners__link"
+              >
                 <img
                   class="partners__logo"
                   src="images/dest/icons/airbnb.svg"
@@ -338,7 +358,7 @@
         <!-- /.container -->
       </div>
       <!-- /.about -->
-      <div class="portfolio portfolio--hidden">
+      <div class="portfolio portfolio--hidden" id="portfolio">
         <div class="container">
           <a href="#" class="portfolio__heading">портфолио</a>
           <div class="portfolio-top">
@@ -368,11 +388,12 @@
           <div class="portfolio-slider swiper-container">
             <div class="swiper-wrapper">
               <div class="portfolio-slider__card swiper-slide">
-                <img
-                  src="images/dest/slider-photo-1.jpg"
-                  alt="Image: Our project"
-                  class="portfolio-slider__photo"
-                />
+                <div class="portfolio-slider__photo">
+                  <img
+                    src="images/dest/slider-photo-1.jpg"
+                    alt="Image: Our project"
+                  />
+                </div>
                 <div class="portfolio-slider__text">
                   <h3 class="portfolio-slider__preheader">Вебсайт, Лендинг</h3>
                   <h2 class="portfolio-slider__header">Проект Вебсайта</h2>
@@ -381,11 +402,13 @@
               </div>
               <!-- /.portfolio-slider__card -->
               <div class="portfolio-slider__card swiper-slide">
-                <img
-                  src="images/dest/slider-photo-2.jpg"
-                  alt="Image: Our project"
-                  class="portfolio-slider__photo"
-                />
+                <div class="portfolio-slider__photo">
+                  <img
+                    src="images/dest/slider-photo-2.jpg"
+                    alt="Image: Our project"
+                  />
+                </div>
+                <!-- /.portfolio-slider__photo -->
                 <div class="portfolio-slider__text">
                   <h3 class="portfolio-slider__preheader">
                     Паенль навигации, UI/UX Дизайн
@@ -396,11 +419,13 @@
               </div>
               <!-- /.portfolio-slider__card -->
               <div class="portfolio-slider__card swiper-slide">
-                <img
-                  src="images/dest/slider-photo-3.jpg"
-                  alt="Image: Our project"
-                  class="portfolio-slider__photo"
-                />
+                <div class="portfolio-slider__photo">
+                  <img
+                    src="images/dest/slider-photo-3.jpg"
+                    alt="Image: Our project"
+                  />
+                </div>
+                <!-- /.portfolio-slider__photo -->
                 <div class="portfolio-slider__text">
                   <h3 class="portfolio-slider__preheader">
                     Приложения, Мобильные, iOS
@@ -411,14 +436,31 @@
               </div>
               <!-- /.portfolio-slider__card -->
               <div class="portfolio-slider__card swiper-slide">
-                <img
-                  src="images/dest/slider-photo-4.jpg"
-                  alt="Image: Our project"
-                  class="portfolio-slider__photo"
-                />
+                <div class="portfolio-slider__photo">
+                  <img
+                    src="images/dest/slider-photo-4.jpg"
+                    alt="Image: Our project"
+                  />
+                </div>
+                <!-- /.portfolio-slider__photo -->
                 <div class="portfolio-slider__text">
                   <h3 class="portfolio-slider__preheader">Instagram</h3>
                   <h2 class="portfolio-slider__header">Проект Иллюстраций</h2>
+                </div>
+                <!-- /.portfolio-slider__text -->
+              </div>
+              <!-- /.portfolio-slider__card -->
+              <div class="portfolio-slider__card swiper-slide">
+                <div class="portfolio-slider__photo">
+                  <img
+                    src="images/dest/slider-photo-2.jpg"
+                    alt="Image: Our project"
+                  />
+                </div>
+                <!-- /.portfolio-slider__photo -->
+                <div class="portfolio-slider__text">
+                  <h3 class="portfolio-slider__preheader">Yandex, Google</h3>
+                  <h2 class="portfolio-slider__header">Проект Таргета</h2>
                 </div>
                 <!-- /.portfolio-slider__text -->
               </div>
@@ -437,11 +479,12 @@
           <h2 class="portfolio-mobile__title">Наши проекты</h2>
           <div class="portfolio-mobile__cards">
             <div class="portfolio-mobile__card">
-              <img
-                src="images/dest/slider-photo-1.jpg"
-                alt="Image: Our project"
-                class="portfolio-mobile__photo"
-              />
+              <div class="portfolio-mobile__photo">
+                <img
+                  src="images/dest/slider-photo-1.jpg"
+                  alt="Image: Our project"
+                />
+              </div>
               <div class="portfolio-mobile__text">
                 <h3 class="portfolio-mobile__preheader">Вебсайт, Лендинг</h3>
                 <h2 class="portfolio-mobile__header">Проект Вебсайта</h2>
@@ -450,11 +493,12 @@
             </div>
             <!-- /.portfolio-mobile__card -->
             <div class="portfolio-mobile__card">
-              <img
-                src="images/dest/slider-photo-2.jpg"
-                alt="Image: Our project"
-                class="portfolio-mobile__photo"
-              />
+              <div class="portfolio-mobile__photo">
+                <img
+                  src="images/dest/slider-photo-2.jpg"
+                  alt="Image: Our project"
+                />
+              </div>
               <div class="portfolio-mobile__text">
                 <h3 class="portfolio-mobile__preheader">
                   Паенль навигации, UI/UX Дизайн
@@ -465,11 +509,13 @@
             </div>
             <!-- /.portfolio-mobile__card -->
             <div class="portfolio-mobile__card">
-              <img
-                src="images/dest/slider-photo-3.jpg"
-                alt="Image: Our project"
-                class="portfolio-mobile__photo"
-              />
+              <div class="portfolio-mobile__photo">
+                <img
+                  src="images/dest/slider-photo-3.jpg"
+                  alt="Image: Our project"
+                />
+              </div>
+              <!-- /.portfolio-mobile__photo -->
               <div class="portfolio-mobile__text">
                 <h3 class="portfolio-mobile__preheader">
                   Приложения, Мобильные, iOS
@@ -480,11 +526,13 @@
             </div>
             <!-- /.portfolio-mobile__card -->
             <div class="portfolio-mobile__card">
-              <img
-                src="images/dest/slider-photo-4.jpg"
-                alt="Image: Our project"
-                class="portfolio-mobile__photo"
-              />
+              <div class="portfolio-mobile__photo">
+                <img
+                  src="images/dest/slider-photo-4.jpg"
+                  alt="Image: Our project"
+                />
+              </div>
+              <!-- /.portfolio-mobile__photo -->
               <div class="portfolio-mobile__text">
                 <h3 class="portfolio-mobile__preheader">Instagram</h3>
                 <h2 class="portfolio-mobile__header">Проект Иллюстраций</h2>
@@ -497,13 +545,13 @@
         </div>
         <!-- /.container -->
       </div>
-      <!-- /.portfololio-mobile portfolio-mobile--visible -->
+      <!-- /.portfolio-mobile -->
       <div class="reviews">
         <div class="container">
           <h3 class="reviews__heading">Отзывы</h3>
           <h2 class="reviews__title">Что говорят о нас</h2>
           <div class="reviews__wrapper">
-            <button class="reviews-slide__button--next">
+            <button class="reviews__button reviews__button--next">
               <img
                 src="images/dest/icons/slider-arrow-next.svg"
                 alt="Arrow: next slide"
@@ -616,7 +664,11 @@
               <p class="social__description">
                 Для нашего портфолио и повседневных дел в офисе
               </p>
-              <a class="social__subscribe" href="#"
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social__subscribe"
+                href="https://www.instagram.com/"
                 >Подписаться<span class="social__link-arrow"
                   ><img
                     src="images/dest/icons/arrow-link.svg"
@@ -637,7 +689,11 @@
               <p class="social__description">
                 Для случайных мыслей и интересных вещей
               </p>
-              <a class="social__subscribe" href="#"
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social__subscribe"
+                href="https://twitter.com/"
                 >Подписаться<span class="social__link-arrow"
                   ><img
                     src="images/dest/icons/arrow-link.svg"
@@ -658,7 +714,11 @@
               <p class="social__description">
                 Для обновленных и подробных всех нашего портфолио
               </p>
-              <a class="social__subscribe" href="#"
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social__subscribe"
+                href="https://dribbble.com/"
                 >Подписаться<span class="social__link-arrow"
                   ><img
                     src="images/dest/icons/arrow-link.svg"
@@ -679,7 +739,11 @@
               <p class="social__description">
                 Для нашего видео руководства и советах по индустрии дизайна
               </p>
-              <a class="social__subscribe" href="#"
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social__subscribe"
+                href="https://www.youtube.com/"
                 >Подписаться<span class="social__link-arrow"
                   ><img
                     src="images/dest/icons/arrow-link.svg"
@@ -694,29 +758,32 @@
       </div>
       <!-- /.social -->
       <div class="brief">
-        <div class="brief__wrapper">
-          <h2 class="brief__title">Мы готовы к сложным проектам</h2>
-          <p class="brief__subtitle">
-            Отправьте нам свой бриф и расскажите о своем проекте. Мы готовы
-            помочь всем, что вам нужно
-          </p>
-          <button
-            class="button brief__button"
-            data-toggle="modal"
-            type="button"
-          >
-            Пообщаемся?
-          </button>
+        <div class="container">
+          <div class="brief__wrapper">
+            <h2 class="brief__title">Мы готовы к сложным проектам</h2>
+            <p class="brief__subtitle">
+              Отправьте нам свой бриф и расскажите о своем проекте. Мы готовы
+              помочь всем, что вам нужно
+            </p>
+            <button
+              class="button brief__button"
+              data-toggle="modal"
+              type="button"
+            >
+              Пообщаемся?
+            </button>
+          </div>
+          <!-- /.brief__wrapper -->
         </div>
-        <!-- /.brief__wrapper -->
+        <!-- /.container -->
       </div>
       <!-- /.brief -->
 
       <footer class="footer">
         <div class="container">
           <div class="footer__wrapper">
-            <div class="footer__col">
-              <a href="#" class="footer_logo">
+            <div class="footer__col footer__col--lg footer__col--mr--50">
+              <a href="#" class="footer__logo">
                 <img
                   src="images/dest/icons/logo-footer.svg"
                   alt="Logo: ehya"
@@ -729,7 +796,7 @@
               <div class="footer__social">
                 <a
                   class="footer__social-icon"
-                  href="#"
+                  href="https://www.google.ru/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -740,7 +807,7 @@
                 </a>
                 <a
                   class="footer__social-icon"
-                  href="#"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -751,7 +818,7 @@
                 </a>
                 <a
                   class="footer__social-icon"
-                  href="#"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -762,7 +829,7 @@
                 </a>
                 <a
                   class="footer__social-icon"
-                  href="#"
+                  href="https://www.linkedin.cn/login"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -773,7 +840,7 @@
                 </a>
                 <a
                   class="footer__social-icon"
-                  href="#"
+                  href="https://www.youtube.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -806,12 +873,12 @@
             </div>
             <!-- /.footer__col -->
             <!-- /.footer__col -->
-            <div class="footer__col">
+            <div class="footer__col footer__col--mr--35">
               <h3 class="footer__title">Компания</h3>
               <a href="#" class="footer__link" target="_blank">О нас</a>
               <a href="#" class="footer__link" target="_blank">Условия</a>
               <a href="#" class="footer__link" target="_blank"
-                >Политика <br>конфиденциальности
+                >Privacy Policy
               </a>
               <a href="#" class="footer__link" target="_blank">Карьера</a>
             </div>
@@ -851,7 +918,7 @@
         <a href="#" class="modal__close">
           <img src="images/dest/icons/close.svg" alt="Icon: close" />
         </a>
-        <h3 class="modal__title modal__title--mb-3">Получить прайс-лист</h3>
+        <h3 class="modal__title modal__title--mb-3">Связаться с нами</h3>
         <form class="modal__form form" action="send.php" method="POST">
           <input
             type="text"
@@ -876,6 +943,13 @@
             name="mail"
             required
           />
+          <textarea
+            class="message modal__message"
+            cols="20"
+            rows="6"
+            placeholder="Message"
+            name="message"
+          ></textarea>
           <div class="modal__button-wrapper">
             <button class="button modal__button" type="submit">
               Отправить

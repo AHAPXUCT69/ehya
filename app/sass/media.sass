@@ -12,10 +12,13 @@
     &__brands
       justify-content: space-between
     &__link
-      flex-basis: none
+      flex-basis: auto
   .about
     &__subtitle
       padding-right: 0
+  .footer
+    &__wrapper
+      flex-wrap: wrap
 @media (max-width: 1200px)
   .container
     max-width: 940px
@@ -37,6 +40,15 @@
     &__subtitle
       margin-top: 0
       margin-bottom: 30px
+  .reviews
+    &-slide
+      width: 455px
+      height: 300px
+      &__text
+        max-height: 145px
+  .social
+    &__description
+      line-height: 1.1
   .cards
     &__item
       flex-basis: 48%
@@ -47,6 +59,14 @@
     &__description
       font-size: 17px
       line-height: 26px
+  .footer
+    &__col
+      margin-right: 55px
+      &--lg
+        margin-right: 55px
+      &--mr
+        &--35
+          margin-right: 55px
 @media (max-width: 992px)
   .container
     max-width: 90%
@@ -79,6 +99,48 @@
     &__item
       flex-basis: 100%
       min-height: 197px
+  .social
+    &__cards
+      flex-wrap: wrap
+    &__card
+      margin-bottom: 32px
+  .brief
+    padding-top: 63px
+    padding-bottom: 63px
+    &__title
+      margin-bottom: 34px
+      font-size: 28px
+      line-height: 30px
+    &__subtitle
+      margin-bottom: 12px
+      font-size: 16px
+      line-height: 27px
+    &__button
+      width: 170px
+      padding: 13px 25px
+      font-size: 16px
+      line-height: 22px
+  .reviews
+    &-slide
+      width: 100%
+      height: 300px
+      padding: 80px
+      &__bio
+        justify-content: center
+  .footer
+    &__wrapper
+      justify-content: space-between
+    &__col
+      margin-right: 50px
+      margin-bottom: 25px
+      &--lg
+        margin-right: 50px
+        order: 1
+      &--mr
+        &--35
+          margin-right: 50px
+    &__bottom
+      display: none
 @media (max-width: 768px)
   body.lock
     height: 100%
@@ -214,7 +276,11 @@
       display: none
       &--mobile
         display: block
-        top: 115%
+        width: 48px
+        height: 48px
+        text-align: center
+        line-height: 48px
+        top: 112%
         left: 50%
         transform: translateX(-50%)
     &-top
@@ -267,12 +333,60 @@
     &-mobile
       &__photo
         object-fit: cover
+  .social
+    &__heading
+      font-size: 14px
+      line-height: 19px
+    &__title
+      font-size: 28px
+      line-height: 36px
+    &__icon
+      width: 24px
+      &-back
+        width: 64px
+        height: 64px
+    &__name
+      font-size: 20px
+      line-height: 24px
+    &__description
+      font-size: 13px
+      line-height: 19px
+    &__subscribe
+      font-size: 11px
+      line-height: 20px
+    &__link
+      &-arrow
+        img
+          width: 12px
+          height: 10px
+  .reviews
+    &-slide
+      height: 100%
+      padding: 40px
+    &__heading
+      font-size: 14px
+      line-height: 19px
+    &__title
+      font-size: 28px
+      line-height: 36px
+  .footer
+    padding-top: 50px
+    &__col
+      margin-right: 15px
+      margin-bottom: 25px
+      &--lg
+        flex-basis: 100%
+        margin-bottom: 50px
+        align-items: center
+        margin-bottom: 0
+    &__about
+      text-align: center
   .modal
     &__dialog
       min-width: 400px
 @media (max-width: 596px)
   .container
-    max-width: 86%
+    max-width: 89%
   .header
     &__top
       margin-bottom: 15px
@@ -292,7 +406,7 @@
       width: 100%
       max-height: 380px
   .partners
-    padding-top: 92px
+    padding-top: 82px
     padding-bottom: 43px
     margin-bottom: 0
     &__title
@@ -306,14 +420,17 @@
       max-width: 249px
       margin: auto
     &__logo
-      margin-bottom: 25px
+      margin-bottom: 21px
   .about
+    padding-top: 7px
+    &__title
+      margin-bottom: 17px
     &__subtitle
-      margin-bottom: 0
+      margin-bottom: 5px
   .cards
     &__item
-      margin-bottom: 10px
-      padding: 21px 27px
+      margin-bottom: 7px
+      padding: 22px 18px 13px 28px
       flex-direction: column
       max-height: 197px
       &:nth-of-type(1)
@@ -322,36 +439,35 @@
         order: 2
       &:nth-of-type(3)
         order: 5
-        padding-top: 10px
-        padding-left: 16px
       &:nth-of-type(4)
         order: 3
       &:nth-of-type(5)
         order: 4
       &:nth-of-type(6)
         order: 6
-        padding-top: 8px
     &__title
-      margin-bottom: 7px
+      margin-bottom: 6px
       font-size: 20px
       line-height: 24px
     &__description
       margin-top: 0
+      margin-bottom: 0
       font-size: 14px
       line-height: 20px
     &__icon
+      margin-bottom: 25px
       width: 32px
       height: 34px
-      margin-bottom: 20px
   .portfolio
     &-mobile
       &--visible
         display: block
         width: 100%
-        padding: 54px 0
+        padding-top: 21px
       &__card
         margin-bottom: 24px
       &__heading
+        margin-bottom: 16px
         text-align: center
         display: block
         font-family: Open Sans
@@ -366,6 +482,8 @@
       &:focus, &:active
         outline: none
       &__title
+        margin-top: 0
+        margin-bottom: 35px
         font-family: Roboto
         font-weight: bold
         font-size: 36px
@@ -374,18 +492,19 @@
         text-align: center
         color: $primary
       &__photo
-        display: block
+        overflow: hidden
         width: 100%
+        height: 300px
         background-color: #DDE6F4
         border-top: 1px solid #DDE6F4
         border-left: 1px solid #DDE6F4
         border-right: 1px solid #DDE6F4
         border-radius: 8px 8px 0px 0px
+        img
+          width: 100%
       &__text
-        padding: 24px 0 24px 24px
-        border-bottom: 1px solid #DDE6F4
-        border-left: 1px solid #DDE6F4
-        border-right: 1px solid #DDE6F4
+        padding: 6px 0 19px 24px
+        border: 1px solid #DDE6F4
         border-radius: 0px 0px 8px 8px
       &__preheader
         margin-bottom: 0
@@ -396,6 +515,8 @@
         text-align: center
         color: $link-color
       &__header
+        margin-top: 12px
+        margin-bottom: 0
         font-family: Roboto
         font-style: normal
         font-weight: bold
@@ -406,13 +527,83 @@
         color: $primary
     &--hidden
       display: none
-  .cards
-    &__title
-      margin-bottom: 2px
-      font-size: 20px
-      line-height: 24px
-    &__icon
+  .social
+    padding-top: 80px
+    padding-bottom: 27px
+    &__heading
       margin-bottom: 25px
+    &__card
+      justify-content: flex-start
+      width: 130px
+      min-height: 199px
+      margin-bottom: 30px
+    &__title
+      margin-bottom: 32px
+    &__icon
+      &-back
+        margin-bottom: 18px
+        width: 48px
+        height: 48px
+    &__name
+      margin-top: 0
+      margin-bottom: 13px
+      line-height: 1
+    &__description
+      margin-bottom: 0
+      line-height: 143%
+      margin-top: 0
+      max-width: 130px
+      max-height: 76px
+  .reviews
+    padding-top: 24px
+    &__title
+      margin-bottom: 69px
+      text-align: center
+    &__heading
+      margin-top: 5px
+      margin-bottom: 23px
+      text-align: center
+    &-slide
+      height: 354px
+      padding: 24px 10px 18px 10px
+      &__avatar
+        margin-right: 0
+        margin-bottom: 15px
+      &__bio
+        margin-bottom: 9px
+        flex-direction: column
+        align-items: center
+        text-align: center
+      &__name
+        margin-bottom: 7px
+        font-size: 20px
+        line-height: 24px
+      &__position
+        font-size: 11px
+        line-height: 27px
+      &__text
+        margin: 0
+        font-size: 14px
+        line-height: 152%
+        text-align: center
+      &__text
+        max-height: 176px
+    &__button
+      &--next
+        top: 114%
+        right: 50%
+        width: 48px
+        height: 48px
+  .brief
+    &__subtitle
+      max-width: 280px
+  .footer
+    &__col
+      flex-basis: 45%
+      align-items: center
+      margin-right: 0
+      &--lg
+        flex-basis: 100%
   .modal
     &__dialog
       min-width: 340px
@@ -423,20 +614,55 @@
   .partners
     &__title
       white-space: normal
-  .cards
-    &__item
-      padding: 22px 18px 13px 24px
     &__title
       margin-bottom: 13px
   .portfolio
     &-mobile
-      padding: 0
       &__title
         font-size: 28px
         line-height: 36px
       &__text
         padding-left: 10px
         padding-right: 10px
+  .footer
+    padding-bottom: 70px
+    &__wrapper
+      margin-bottom: 0
+    &__col
+      padding-left: 6px
+      flex-basis: 50%
+      align-items: flex-start
+      margin-right: 0
+      &--mr
+        &--35
+          margin-bottom: 32px
+      &--lg
+        flex-basis: 100%
+        align-items: center
+    &__logo
+      &-image
+        width: 77px
+        height: 24px
+    &__about
+      margin-top: 13px
+      margin-bottom: 26px
+      max-width: 100%
+      text-align: center
+      font-size: 14px
+      line-height: 28px
+    &__link
+      margin-bottom: 15px
+      font-size: 14px
+      line-height: 20px
+    &__title
+      margin-bottom: 18px
+      font-size: 16px
+      line-height: 22px
+    &__bottom
+      display: none
+      &__social
+        &-icon
+          margin-right: 14px
   .modal
     &__dialog
       min-width: 300px
@@ -452,7 +678,22 @@
 @media (max-width: 380px)
   .header
     &__macbook
-      max-height: 230px
+      right: 37px
+      width: 378px
+      max-height: 240px
+    &__iphone
+      left: 17px
+    &__circle
+      bottom: -76px
+      right: -135px
+  .portfolio
+    &-mobile
+      &__photo
+        img
+          width: auto
+  .footer
+    &__social
+      max-width: 185px
 @media (max-height: 480px)
   .modal
     &__dialog
@@ -467,7 +708,38 @@
       transition: all 0.3s
       &:hover
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+      &:active, &:focus
+        outline: none
+  .nav
+    &__link
+      &:hover
+        color: $secondary
+    &:active, &:focus
+      outline: none
   .button
     transition: all 0.3s
     &:hover
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    &:active, &:focus
+      outline: none
+  .social
+    &__subscribe
+      transition: transform 0.3s
+      &:hover
+        transform: translate(5px, 0px)
+      &:active, &:focus
+        outline: none
+  .footer
+    &__link
+      transition: all 0.3s
+      &:hover
+        color: #ffffff
+      &:active, &:focus
+        outline: none
+    &__social
+      &-icon
+        transition: all 0.3s
+        &:hover
+          transform: translate(0px, -5px)
+        &:active, &:focus
+          outline: none

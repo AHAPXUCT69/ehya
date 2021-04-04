@@ -1,6 +1,6 @@
 .social
-  padding-top: 50px
-  padding-bottom: 50px
+  padding-top: 34px
+  padding-bottom: 122px
   &__heading
     display: block
     margin-bottom: 20px
@@ -17,24 +17,26 @@
     &:focus, &:active
       outline: none
   &__title
-    text-align: center
     margin-top: 0
-    margin-bottom: 60px
+    margin-bottom: 53px
     font-family: Roboto
-    font-style: normal
     font-weight: bold
-    font-size: 30px
-    line-height: 40px
+    font-size: 36px
+    line-height: 48px
+    text-align: center
     letter-spacing: 0.2px
     color: $primary
   &__cards
     display: flex
-    justify-content: space-between
-    align-items: center
+    justify-content: space-around
+    max-width: 1093px
+    margin: auto
   &__card
+    width: 263px
+    min-height: 232px
     display: flex
     flex-direction: column
-    justify-content: space-evenly
+    justify-content: flex-start
     align-items: center
     text-align: center
   &__icon-back
@@ -48,6 +50,8 @@
   &__icon
     z-index: 2
   &__name
+    margin-top: 39px
+    margin-bottom: 0px
     font-family: Roboto
     font-weight: bold
     font-size: 20px
@@ -63,6 +67,7 @@
     text-align: center
     color: $text-color
   &__subscribe
+    margin-top: auto
     font-family: Open Sans
     font-weight: bold
     font-size: 18px

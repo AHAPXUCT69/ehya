@@ -27,12 +27,6 @@
       background-color: transparent
       color: $link-color
       transition: all 0.3s
-      &:hover
-        background-color: $link-color
-        color: #fff
-        border: 2px solid transparent
-      &:active, &:focus
-        outline: none
     &__burger
       display: none
   &-main
@@ -156,10 +150,6 @@
   &__link
     text-decoration: none
     color: inherit
-    &:hover
-      color: $secondary
-    &:active, &:focus
-      outline: none
   &__submenu
     display: none
     width: 150px
@@ -169,7 +159,7 @@
     padding: 0
     margin: 0
     list-style: none
-    transition: all 0.5
+    transition: all 0.5s
     z-index: 99
     &--visible
       display: block

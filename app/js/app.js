@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+  // ScrollTo
+  $('.header__button').on('click', function() {
+    $.scrollTo('#portfolio', 800, 'swing');
+  });
+  $('.header__next').on('click', function() {
+    $.scrollTo('#partners', 800);
+  });
+
   // Swiper slider
   const swiper = new Swiper('.swiper-container', {
   // Optional parameters
@@ -26,7 +34,7 @@ const swiper2 = new Swiper('.reviews__container', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.reviews-slide__button--next',
+    nextEl: '.reviews__button--next',
   },
   keyboard: {
       enabled: false,

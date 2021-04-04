@@ -1,6 +1,6 @@
 .about
   background-color: #F9FBFE
-  padding-top: 0px
+  padding-top: 53px
   padding-bottom: 57px
   &__text
     display: flex
@@ -24,15 +24,13 @@
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-  align-items: center
-  overflow: auto
   background-color: #f9fbfe
   &__item
     display: flex
-    align-items: flex-start
     max-width: 361px
-    height: 165px
-    padding: 34px 27px
+    min-height: 165px
+    height: auto
+    padding: 26px 24px 26px 28px
     margin-bottom: 23px
     background-color: #FFFFFF
     border: 1px solid #E5EAF4
@@ -42,7 +40,6 @@
     width: 32px
     height: 37px
     margin-right: 19px
-  &__text
   &__title
     margin: 0
     font-family: Roboto
@@ -53,6 +50,7 @@
     color: $primary
   &__description
     margin-top: 5px
+    margin-bottom: 0
     font-family: Open Sans
     font-weight: normal
     font-size: 14px
